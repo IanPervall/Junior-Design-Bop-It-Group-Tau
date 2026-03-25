@@ -1,1 +1,50 @@
-This is a substitute for the microcontroller code since I was not able to do the assignment since I was extremely far behind on my PCB.
+//BLINK ONCE//
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(8, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(8, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);                      // wait for a second
+  digitalWrite(8, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);                      // wait for a second
+}
+
+//BLINK 3 TIMES//
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+
+  pinMode(9, INPUT_PULLUP); 
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  if(digitalRead(9)==HIGH)
+  {
+  digitalWrite(6, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);                      // wait for a second
+  digitalWrite(6, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);
+  digitalWrite(7, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);                      // wait for a second
+  digitalWrite(7, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);                     // wait for a second
+  digitalWrite(8, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);                      // wait for a second
+  digitalWrite(8, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);
+  }
+  else
+  {
+    digitalWrite(6, LOW);
+    digitalWrite(7, LOW);
+    digitalWrite(8, LOW);
+  }
+}
