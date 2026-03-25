@@ -1,0 +1,1 @@
+This is a substitute for the microcontroller code since I was not able to do the assignment since I was extremely far behind on my PCB.
